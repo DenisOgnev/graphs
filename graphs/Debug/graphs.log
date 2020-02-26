@@ -1,14 +1,40 @@
 ﻿  Source.cpp
-c:\users\denis\source\repos\graphs\graphs\source.cpp(9): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\denis\source\repos\graphs\graphs\source.cpp(11): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\denis\source\repos\graphs\graphs\source.cpp(13): warning C4244: аргумент: преобразование "_Ty" в "const unsigned int", возможна потеря данных
+c:\users\denis\desktop\graphs\graphs\source.cpp(51): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\denis\desktop\graphs\graphs\source.cpp(54): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\denis\desktop\graphs\graphs\source.cpp(66): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\denis\desktop\graphs\graphs\source.cpp(73): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\denis\desktop\graphs\graphs\source.cpp(76): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\denis\desktop\graphs\graphs\source.cpp(90): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\denis\desktop\graphs\graphs\source.cpp(104): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
+c:\users\denis\desktop\graphs\graphs\source.cpp(108): warning C4244: инициализация: преобразование "_Ty" в "int", возможна потеря данных
           with
           [
               _Ty=float
           ]
-c:\users\denis\source\repos\graphs\graphs\source.cpp(30): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\denis\source\repos\graphs\graphs\source.cpp(33): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\denis\source\repos\graphs\graphs\source.cpp(46): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\denis\source\repos\graphs\graphs\source.cpp(53): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\denis\source\repos\graphs\graphs\source.cpp(56): warning C4018: <: несоответствие типов со знаком и без знака
-  graphs.vcxproj -> C:\Users\denis\source\repos\graphs\Debug\graphs.exe
+c:\users\denis\desktop\graphs\graphs\source.cpp(110): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\denis\desktop\graphs\graphs\source.cpp(115): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
+c:\users\denis\desktop\graphs\graphs\source.cpp(116): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
+c:\users\denis\desktop\graphs\graphs\source.cpp(128): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
+c:\users\denis\desktop\graphs\graphs\source.cpp(131): warning C4244: инициализация: преобразование "_Ty" в "int", возможна потеря данных
+          with
+          [
+              _Ty=float
+          ]
+c:\users\denis\desktop\graphs\graphs\source.cpp(133): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\denis\desktop\graphs\graphs\source.cpp(139): warning C4244: аргумент: преобразование "int" в "const float", возможна потеря данных
+c:\users\denis\desktop\graphs\graphs\source.cpp(148): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\denis\desktop\graphs\graphs\source.cpp(150): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\denis\desktop\graphs\graphs\source.cpp(152): warning C4244: аргумент: преобразование "_Ty" в "unsigned int", возможна потеря данных
+          with
+          [
+              _Ty=float
+          ]
+c:\users\denis\desktop\graphs\graphs\source.cpp(161): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\denis\desktop\graphs\graphs\source.cpp(163): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\denis\desktop\graphs\graphs\source.cpp(166): warning C4244: аргумент: преобразование "int" в "const _Ty", возможна потеря данных
+          with
+          [
+              _Ty=float
+          ]
+  LINK : не найден или не выполнена сборка C:\Users\denis\Desktop\graphs\Debug\graphs.exe при последней инкрементной компоновке; выполняется полная компоновка
+  graphs.vcxproj -> C:\Users\denis\Desktop\graphs\Debug\graphs.exe

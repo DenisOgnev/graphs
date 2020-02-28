@@ -7,37 +7,47 @@ using namespace std;
 
 vector<vector<float>> list =
 {
-	{1, 2, 3, 4},
+	{1, 5},								//0
+	{0, 2, 3, 5},						//1
+	{1, 3},								//2
+	{1, 2, 4, 5, 6},					//3
+	{3, 5},								//4
+	{0, 1, 3, 4},						//5
+	{3, 7, 8},							//6
+	{6, 8},								//7
+	{6, 7}								//8
+
+	/*{1, 2, 3, 4},
 	{0, 2, 4},
 	{0, 1},
 	{0, 4},
-	{0, 1, 3}
+	{0, 1, 3}*/
 
 	//{1.0f, 2.0f, 3.0f},				//0
 	//{0.0f, 4.0f, 5.0f},				//1
-	//{0.0f, 6.0f},					//2
-	//{0.0f, 7.0f},					//3
+	//{0.0f, 6.0f},						//2
+	//{0.0f, 7.0f},						//3
 	//{1.0f},							//4
-	//{1.0f, 9.0f},					//5
+	//{1.0f, 9.0f},						//5
 	//{2.0f},							//6
-	//{3.0f, 8.0f},					//7
+	//{3.0f, 8.0f},						//7
 	//{7.0f},							//8
 	//{5.0f}							//9
 
-	//{0.0f, 1.0f, 2.0f, 3.0f},		//0
-	//{0.0f, 1.0f, 4.0f, 5.0f},		//1
-	//{0.0f, 2.0f, 6.0f},			//2
-	//{0.0f, 3.0f, 7.0f},			//3
-	//{1.0f, 4.0f},					//4
-	//{1.0f, 5.0f, 9.0f},			//5
-	//{2.0f, 6.0f},					//6
-	//{3.0f, 7.0f, 8.0f},			//7
-	//{7.0f, 8.0f},					//8
-	//{5.0f, 9.0f},					//9
-	//{6.0f, 10.0f},				//10
-	//{6.0f, 11.0f},				//11
-	//{9.0f, 12.0f},				//12
-	//{9.0f, 13.0f},				//13
+	//{0.0f, 1.0f, 2.0f, 3.0f},			//0
+	//{0.0f, 1.0f, 4.0f, 5.0f},			//1
+	//{0.0f, 2.0f, 6.0f},				//2
+	//{0.0f, 3.0f, 7.0f},				//3
+	//{1.0f, 4.0f},						//4
+	//{1.0f, 5.0f, 9.0f},				//5
+	//{2.0f, 6.0f},						//6
+	//{3.0f, 7.0f, 8.0f},				//7
+	//{7.0f, 8.0f},						//8
+	//{5.0f, 9.0f},						//9
+	//{6.0f, 10.0f},					//10
+	//{6.0f, 11.0f},					//11
+	//{9.0f, 12.0f},					//12
+	//{9.0f, 13.0f},					//13
 
 };
 
@@ -45,6 +55,7 @@ vector<vector<bool>> matrix;
 vector<bool> was;
 vector<bool> wasSt;
 vector<bool> wasBfs;
+vector<int> dist;
 
 void showList(vector<vector<float>> l)
 {
@@ -123,9 +134,11 @@ void stackDfs(int start)
 
 void bfs(int start)
 {
+	int k = 0;
 	wasBfs[start] = true;
 	queue<float> q;
 	q.push(start);
+	dist[start] = 0;
 	while (!q.empty())
 	{
 		int v = q.front();
@@ -134,7 +147,9 @@ void bfs(int start)
 		{
 			if (matrix[v][i] && wasBfs[i] == false)
 			{
+				dist[i] = dist[v] + 1;
 				cout << i << " ";
+				cout << "[" << dist[i] << "] ";
 				wasBfs[i] = true;
 				q.push(i);
 			}
@@ -180,17 +195,18 @@ int main()
 
 	vector<vector<float>> list1 = transformToList(matrix);
 	showList(list1);
-	
+
 	cout << endl;
 
 	was.resize(matrix.size());
 	wasSt.resize(matrix.size());
 	wasBfs.resize(matrix.size());
+	dist.resize(matrix.size());
 	dfs(1);
 	cout << endl;
 	stackDfs(1);
 	cout << endl;
-	bfs(1);
+	bfs(0);
 	cout << "\n\n";
 
 
